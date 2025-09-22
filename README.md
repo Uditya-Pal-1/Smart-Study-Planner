@@ -24,8 +24,6 @@ It's super easy! Just follow these simple steps to get the planner up and runnin
 
 Clone the project: Grab a copy of this repository by cloning it to your machine.
 
-git clone [https://github.com/your-username/smart-study-planner.git](https://github.com/your-username/smart-study-planner.git)
-
 Open the project folder: Navigate into the directory.
 
 cd smart-study-planner
