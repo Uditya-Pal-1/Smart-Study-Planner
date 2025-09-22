@@ -1,0 +1,49 @@
+/* General Styles */
+* {box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+body {background: #f5f7fa; color: #333; transition: background 0.3s, color 0.3s;}
+header {background: #4A90E2; color: white; padding: 1rem; text-align: center; font-size: 1.7rem; font-weight: bold;}
+main {display: flex; flex-wrap: wrap; gap: 1rem; padding: 1rem;}
+section {flex: 1 1 350px; background: white; padding: 1rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);} 
+h2 {margin-bottom: 0.5rem; color: #4A90E2;}
+ul {list-style: none;}
+button {cursor: pointer; border: none; border-radius: 8px; padding: 0.5rem 1rem; font-size: 0.9rem; transition: 0.2s;}
+button:hover {opacity: 0.9;}
+.btn-primary {background: #4A90E2; color: white;}
+.btn-danger {background: #e74c3c; color: white;}
+.btn-success {background: #27ae60; color: white;}
+.btn-warning {background: #f39c12; color: white;}
+.input-group {display: flex; gap: 0.5rem; margin-bottom: 1rem;}
+input, select, textarea {flex: 1; padding: 0.5rem; border-radius: 8px; border: 1px solid #ccc;}
+textarea {resize: vertical;}
+
+/* Task Card */
+.task-card {background: #f9fbfd; border: 1px solid #ddd; padding: 0.75rem; border-radius: 10px; margin-bottom: 0.75rem; display: flex; flex-direction: column; gap: 0.5rem; box-shadow: 0 2px 6px rgba(0,0,0,0.05);} 
+.task-title {font-weight: bold; font-size: 1rem; color: #333;}
+.task-meta {font-size: 0.85rem; color: #555;}
+.task-actions {display: flex; gap: 0.5rem; flex-wrap: wrap;}
+.done {background: #e8f8f0; border-left: 4px solid #27ae60;}
+.done .task-title {color: #27ae60; text-decoration: line-through;}
+.controls {margin-top: 1rem; text-align: right;}
+
+/* Progress Bar */
+.progress-container {background: #e0e0e0; border-radius: 10px; overflow: hidden; margin-bottom: 1rem;}
+.progress-bar {height: 20px; background: #27ae60; width: 0%; text-align: center; color: white; font-size: 0.85rem; line-height: 20px; transition: width 0.3s;}
+
+/* Timeline */
+.timeline {display: flex; overflow-x: auto; padding: 0.5rem; gap: 0.5rem;}
+.timeline .timeline-task {min-width: 150px; background: #e0f7fa; border-radius: 10px; padding: 0.5rem; cursor: grab;}
+.timeline .timeline-task.dragging {opacity: 0.5;}
+
+/* Modal */
+.modal {display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.5);}
+.modal-content {background: white; margin: 15% auto; padding: 1rem; border-radius: 10px; width: 80%; max-width: 400px; text-align: center; position: relative;}
+.modal-content .close {position: absolute; right: 10px; top: 5px; font-size: 1.5rem; cursor: pointer;}
+
+/* Dark Mode */
+body.dark {background: #1f1f1f; color: #eee;}
+body.dark section {background: #2b2b2b; color: #eee;}
+body.dark .task-card {background: #333; border-color: #555;}
+body.dark .progress-container {background: #555;}
+body.dark .progress-bar {background: #27ae60;}
+
+@media (max-width: 768px) { main {flex-direction: column;} }

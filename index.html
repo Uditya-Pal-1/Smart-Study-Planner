@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Study Planner - Advanced</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>📘 Smart Study Planner - Advanced <button class="btn-warning" onclick="toggleDarkMode()">🌙 Dark Mode</button></header>
+<main>
+
+<section>
+<h2>Subjects</h2>
+<div class="input-group">
+<input id="subjectInput" type="text" placeholder="Enter subject name">
+<input id="subjectColor" type="color" value="#4A90E2">
+<button class="btn-primary" onclick="addSubject()">Add</button>
+</div>
+<ul id="subjects"></ul>
+</section>
+
+<section>
+<h2>Add Task</h2>
+<div class="input-group">
+<input id="taskInput" type="text" placeholder="Task Title">
+</div>
+<div class="input-group">
+<select id="subjectSelect"></select>
+<input id="startDate" type="date">
+<input id="startTime" type="time">
+</div>
+<div class="input-group">
+<input id="endDate" type="date">
+<input id="endTime" type="time">
+</div>
+<div class="input-group">
+<input id="duration" type="number" placeholder="Duration (mins)">
+<select id="priority"><option value="Low">Low</option><option value="Medium">Medium</option><option value="High">High</option></select>
+</div>
+<textarea id="notes" rows="3" placeholder="Notes / Description"></textarea>
+<div class="input-group">
+<label><input type="checkbox" id="reminder"> Set Reminder</label>
+</div>
+<button class="btn-primary" onclick="addTask()">Add Task</button>
+</section>
+
+<section>
+<h2>Task Inspector</h2>
+<div class="progress-container"><div id="progressBar" class="progress-bar">0%</div></div>
+<div id="taskInspector"></div>
+<div class="controls">
+<button class="btn-danger" onclick="clearAllTasks()">🗑 Clear All Tasks</button>
+</div>
+</section>
+
+<section>
+<h2>Timeline</h2>
+<div id="timeline" class="timeline"></div>
+</section>
+
+<div id="reminderModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeReminder()">&times;</span>
+    <p id="reminderText"></p>
+    <audio id="reminderSound" src="alarm-301729.mp3" preload="auto"></audio>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
